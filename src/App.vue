@@ -3,7 +3,7 @@
     <v-container>
       <!-- 검색바 -->
       <search-bar />
-      
+
       <!-- 영화목록 -->
       <movie-list />
     </v-container>
@@ -13,8 +13,6 @@
 <script>
 import SearchBar from '@/components/SearchBar.vue'
 import MovieList from '@/components/MovieList.vue'
-import SearchBar from './components/SearchBar.vue';
-import MovieList from './components/MovieList.vue';
 
 export default {
   components: {
