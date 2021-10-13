@@ -31,14 +31,14 @@ export default {
     },
 
     methods: {
-      searchMovies () {
-        
-        axios.get(`http://www.omdbapi.com/?apikey=c9fcbbb5&s=${this.title}`)
-          .then(res => {
-            console.log(res)
-          })
-        
-        console.log('searchMovies')
+      async searchMovies () {
+       this.loading = true
+       const res = await axios.get(`http://www.omdbapi.com/?apikey=c9fcbbb5&s=${this.title}`)
+          // .then(res => {
+          //   console.log(res)
+          // })  
+        console.log(res.data) 
+        this.loading = false 
       }
     }
 }
