@@ -1,3 +1,22 @@
 <template>
-    <div>Movie List...</div>
+    <div>
+        <ul>
+            <li 
+                v-for="movie in movies"
+                :key="movie.imdbID"
+                >
+                {{ movie }}
+            </li>
+        </ul>
+    </div>
 </template>
+
+<script>
+export default {
+    computed: {
+        movies() {
+            return this.$store.state.movie.movies
+        }
+    }
+}
+</script>
